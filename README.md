@@ -2,10 +2,18 @@
 Service in Go, building a RESTfull Api, PostgreSQL, SQLc, Goose, service worker.
 
 ## install dependencies
+### goose
 ```bash
 - go install github.com/pressly/goose/v3/cmd/goose@latest
+```
+### sqlc
+```bash
 - go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest
-
+```
+### docker-compose
+```bash
+#create container with postgres and pgadmin
+- docker-compose up -d
 ```
 
 ## Commands to exec migrations goose and sqlc
@@ -13,6 +21,10 @@ Service in Go, building a RESTfull Api, PostgreSQL, SQLc, Goose, service worker.
 - goose postgres postgres://postgres:postgres@localhost:5432/blogator up
 - sqlc generate
 
+```
+## Run the project
+```bash
+- go build && ./go-blog-aggregator 
 ```
 
 ## Code Snippets
